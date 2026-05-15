@@ -1,34 +1,55 @@
 import { Link } from "react-router-dom";
+import logo from "../assets/images/logo.png";
 
 export default function Navbar() {
   return (
-    <nav className="flex items-center justify-between px-6 py-5 border-b sticky top-0 bg-white z-50">
+    <nav className="flex items-center justify-between px-6 py-5 border-b bg-black/90 backdrop-blur-md sticky top-0 z-50">
 
-      <h1 className="text-2xl font-extrabold">
-        Task2Earn
-      </h1>
+      {/* LOGO */}
+      <img
+  src={logo}
+  alt="Task2Earn Logo"
+  className="h-12 w-auto"
+/>
 
-      <div className="hidden md:flex gap-8 items-center">
+      {/* NAVIGATION */}
+      <div className="flex gap-4 md:gap-8 items-center flex-wrap justify-end">
 
-        <Link to="/" className="hover:text-gray-500">
+        <Link
+          to="/"
+          className="text-sm md:text-base text-white hover:text-gray-300"
+        >
           Home
         </Link>
 
-        <Link to="/about" className="hover:text-gray-500">
+        <Link
+          to="/about"
+          className="text-sm md:text-base text-white hover:text-gray-300"
+        >
           About
         </Link>
 
-        <Link to="/faq" className="hover:text-gray-500">
+        <Link
+          to="/faq"
+          className="text-sm md:text-base text-white hover:text-gray-300"
+        >
           FAQ
         </Link>
 
-        <Link to="/contact" className="hover:text-gray-500">
+        <Link
+          to="/contact"
+          className="text-sm md:text-base text-white hover:text-gray-300"
+        >
           Contact
         </Link>
 
-        <button className="bg-black text-white px-5 py-2 rounded-xl">
-          Download
-        </button>
+        <Link to="/waitlist">
+
+          <button className="bg-black text-white px-4 py-2 md:px-5 md:py-2 rounded-xl text-sm md:text-base">
+            Download App
+          </button>
+
+        </Link>
 
       </div>
 

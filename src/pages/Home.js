@@ -1,5 +1,8 @@
 import Navbar from "../components/Navbar";
-
+import { Link } from "react-router-dom";
+import screen1 from "../assets/images/screen1.jpg";
+import screen2 from "../assets/images/screen2.jpg";
+import screen3 from "../assets/images/screen3.jpg";
 export default function Home() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
@@ -23,9 +26,11 @@ export default function Home() {
 
   <div className="mt-10 flex justify-center gap-5 flex-wrap">
 
-    <button className="bg-black text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:opacity-90">
-      Download App
-    </button>
+    <Link to="/waitlist">
+  <button className="bg-black text-white px-8 py-4 rounded-2xl text-lg font-semibold">
+    Download App
+  </button>
+</Link>
 
     <button className="border border-black px-8 py-4 rounded-2xl text-lg font-semibold">
       Learn More
@@ -46,17 +51,23 @@ export default function Home() {
 
   <div className="grid md:grid-cols-3 gap-8 mt-14">
 
-    <div className="bg-gray-100 rounded-3xl h-96 flex items-center justify-center text-gray-400 text-xl">
-      Screenshot 1
-    </div>
+    <img
+      src={screen1}
+      alt="App Screenshot 1"
+      className="rounded-3xl shadow-lg w-full"
+    />
 
-    <div className="bg-gray-100 rounded-3xl h-96 flex items-center justify-center text-gray-400 text-xl">
-      Screenshot 2
-    </div>
+    <img
+      src={screen2}
+      alt="App Screenshot 2"
+      className="rounded-3xl shadow-lg w-full"
+    />
 
-    <div className="bg-gray-100 rounded-3xl h-96 flex items-center justify-center text-gray-400 text-xl">
-      Screenshot 3
-    </div>
+    <img
+      src={screen3}
+      alt="App Screenshot 3"
+      className="rounded-3xl shadow-lg w-full"
+    />
 
   </div>
 
