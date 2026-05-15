@@ -9,7 +9,7 @@ export default function Navbar() {
       <img
   src={logo}
   alt="Task2Earn Logo"
-  className="h-12 w-auto"
+  className="h-8 w-auto"
 />
 
       {/* NAVIGATION */}
